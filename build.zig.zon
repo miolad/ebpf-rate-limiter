@@ -1,0 +1,24 @@
+.{
+    .name = .ebpf_rate_limiter,
+    .version = "0.0.0",
+    .fingerprint = 0x219f74548c6a6986, // Changing this has security and trust implications.
+    .minimum_zig_version = "0.15.2",
+    .dependencies = .{
+        .libbpf = .{
+            .url = "https://github.com/tw4452852/libbpf_zig/archive/refs/tags/1.6.1-1.tar.gz",
+            .hash = "libbpf-1.6.1-1-x6jL2WieAAA8TXeArt0ySWg2Ewlh9AnTGnx1C4KB79By",
+        },
+        .vmlinux = .{
+            .url = "git+https://github.com/libbpf/vmlinux.h#991dd4b8dfd8c9d62ce8999521b24f61d9b7fc52",
+            .hash = "N-V-__8AAHJJdQBTOkWRcDbjVivskdEQSg4BC_JFlrXDhNU9",
+        },
+    },
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        // For example...
+        //"LICENSE",
+        //"README.md",
+    },
+}
