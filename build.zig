@@ -8,6 +8,10 @@ pub fn build(b: *std.Build) !void {
         .target = target,
         .optimize = optimize,
     });
+    const clap_dep = b.dependency("clap", .{
+        .target = target,
+        .optimize = optimize,
+    });
 
     const exe = b.addExecutable(.{
         .name = "ebpf_rate_limiter",
@@ -18,6 +22,7 @@ pub fn build(b: *std.Build) !void {
         }),
     });
     exe.root_module.linkLibrary(libbpf_dep.artifact("bpf"));
+    exe.root_module.addImport("clap", clap_dep.module("clap"));
     b.installArtifact(exe);
 
     const vmlinux_dep = b.dependency("vmlinux", .{});

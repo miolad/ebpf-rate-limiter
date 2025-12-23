@@ -12,6 +12,10 @@
             .url = "git+https://github.com/libbpf/vmlinux.h#991dd4b8dfd8c9d62ce8999521b24f61d9b7fc52",
             .hash = "N-V-__8AAHJJdQBTOkWRcDbjVivskdEQSg4BC_JFlrXDhNU9",
         },
+        .clap = .{
+            .url = "https://github.com/Hejsil/zig-clap/archive/refs/tags/0.11.0.tar.gz",
+            .hash = "clap-0.11.0-oBajB-HnAQDPCKYzwF7rO3qDFwRcD39Q0DALlTSz5H7e",
+        },
     },
     .paths = .{
         "build.zig",
